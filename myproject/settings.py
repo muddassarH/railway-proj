@@ -79,20 +79,20 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
-# DATABASES = {
-#     "default": db_config(
-#         default="postgresql://postgres:supabase@supabase@db.bcmtibqydkqnnfsxstry.supabase.co:5432/postgres",
-#         conn_max_age=600,
-        
-#     )
-# }
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        # This will create a file named db.sqlite3 in your project root:
-        "NAME": BASE_DIR / "db.sqlite3",
-    }
+    "default": db_config(
+        default="postgresql://postgres:supabase@supabase@db.bcmtibqydkqnnfsxstry.supabase.co:5432/postgres",
+        conn_max_age=600,
+        
+    )
 }
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.sqlite3",
+#         # This will create a file named db.sqlite3 in your project root:
+#         "NAME": BASE_DIR / "db.sqlite3",
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
