@@ -13,6 +13,9 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 from pathlib import Path
 import os
 from dj_database_url import config as db_config
+import dotenv
+
+dotenv.load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -81,7 +84,7 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
 
 DATABASES = {
     "default": db_config(
-        default="postgresql://postgres:supabase@supabase@db.bcmtibqydkqnnfsxstry.supabase.co:5432/postgres",
+        default=os.getenv("DATABASE_URL"),
         conn_max_age=600,
         
     )
