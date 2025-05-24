@@ -1,1 +1,1 @@
-web: bash -lc "python manage.py migrate --noinput && python manage.py collectstatic --noinput && gunicorn demo_django_project.wsgi:application --bind 0.0.0.0:$PORT --access-logfile - --error-logfile - --log-level debug"
+web: bash -lc "python manage.py migrate --noinput && python manage.py collectstatic --noinput && gunicorn demo_django_project.wsgi:application --bind 0.0.0.0:8000 --access-logfile - --error-logfile - --log-level debug"
