@@ -32,7 +32,8 @@ DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
 ALLOWED_HOSTS = ["*"]
 CORS_ALLOWED_ORIGINS = [
-    'http://localhost:3000',            # allow local React dev server
+    'http://localhost:3000',   
+    'https://frontend-one-delta-74.vercel.app'         # allow local React dev server
 ]
 
 # Application definition
